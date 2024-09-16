@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "快捷搜索",
+    "version": "1.7",
+    "description": "快速搜索选中文本或输入内容，支持多个搜索引擎",
+    "icons": {
+      "16": "icons/logo.png",
+      "32": "icons/logo.png",
+      "48": "icons/logo.png",
+      "128": "icons/logo.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/logo.png"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "host_permissions": [
+      "https://www.google.com/*",
+      "https://www.youtube.com/*",
+      "https://metaso.cn/*",
+      "https://so.360.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Q"
+        },
+        "description": "执行快捷搜索"
+      }
+    },
+    "options_page": "options.html"
+  }

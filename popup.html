@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>快捷搜索</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    #engineList {
+      list-style-type: none;
+      padding: 0;
+    }
+    .engine-item {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .engine-name {
+      font-weight: bold;
+    }
+    button {
+      margin-left: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+    .edit-form {
+      margin-top: 5px;
+    }
+    .edit-form input {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>搜索引擎列表</h2>
+  <ul id="engineList"></ul>
+  <button id="addEngine">添加搜索引擎</button>
+  <script src="popup.js"></script>
+</body>
+</html>
