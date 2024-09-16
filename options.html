@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>快捷搜索设置</title>
+  <meta charset="UTF-8">
+  <title>快捷搜索选项</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    #engineList { list-style-type: none; padding: 0; }
-    #engineList li { margin-bottom: 10px; }
-    input, button { margin-right: 5px; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    input {
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>搜索引擎设置</h1>
+  <h1>快捷搜索选项</h1>
   <ul id="engineList"></ul>
   <button id="addEngine">添加搜索引擎</button>
+  <button id="resetButton">重置所有设置</button>
   <script src="options.js"></script>
 </body>
 </html>
